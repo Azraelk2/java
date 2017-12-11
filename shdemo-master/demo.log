@@ -1,0 +1,955 @@
+2017-12-11 10:44:30,336 INFO  [Version]  - Hibernate Commons Annotations 3.2.0.Final
+2017-12-11 10:44:30,348 INFO  [Environment]  - Hibernate 3.6.6.Final
+2017-12-11 10:44:30,357 INFO  [Environment]  - hibernate.properties not found
+2017-12-11 10:44:30,363 INFO  [Environment]  - Bytecode provider name : javassist
+2017-12-11 10:44:30,368 INFO  [Environment]  - using JDK 1.4 java.sql.Timestamp handling
+2017-12-11 10:44:30,487 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.shdemo.domain.Car
+2017-12-11 10:44:30,501 INFO  [QueryBinder]  - Binding Named query: car.unsold => Select c from Car c where c.sold = false
+2017-12-11 10:44:30,517 INFO  [EntityBinder]  - Bind entity com.example.shdemo.domain.Car on table Car
+2017-12-11 10:44:30,561 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.shdemo.domain.Person
+2017-12-11 10:44:30,561 INFO  [QueryBinder]  - Binding Named query: person.all => Select p from Person p
+2017-12-11 10:44:30,561 INFO  [QueryBinder]  - Binding Named query: person.byPin => Select p from Person p where p.pin = :pin
+2017-12-11 10:44:30,562 INFO  [EntityBinder]  - Bind entity com.example.shdemo.domain.Person on table Person
+2017-12-11 10:44:30,598 INFO  [Configuration]  - Hibernate Validator not found: ignoring
+2017-12-11 10:44:30,602 INFO  [HibernateSearchEventListenerRegister]  - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2017-12-11 10:44:30,606 INFO  [ConnectionProviderFactory]  - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2017-12-11 10:44:30,718 WARN  [JDBCExceptionReporter]  - SQL Error: 0, SQLState: null
+2017-12-11 10:44:30,718 ERROR [JDBCExceptionReporter]  - Cannot create PoolableConnectionFactory (java.net.ConnectException: Połączenie odrzucone (Connection refused))
+2017-12-11 10:44:30,719 WARN  [SettingsFactory]  - Could not obtain connection to query metadata
+org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (java.net.ConnectException: Połączenie odrzucone (Connection refused))
+	at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1549)
+	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1388)
+	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:1044)
+	at org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider.getConnection(LocalDataSourceConnectionProvider.java:81)
+	at org.hibernate.cfg.SettingsFactory.buildSettings(SettingsFactory.java:113)
+	at org.hibernate.cfg.Configuration.buildSettingsInternal(Configuration.java:2863)
+	at org.hibernate.cfg.Configuration.buildSettings(Configuration.java:2859)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1870)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.newSessionFactory(LocalSessionFactoryBean.java:860)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:779)
+	at org.springframework.orm.hibernate3.AbstractSessionFactoryBean.afterPropertiesSet(AbstractSessionFactoryBean.java:211)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1477)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:848)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:790)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:707)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:84)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:285)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1074)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:585)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:84)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:1)
+	at org.springframework.test.context.TestContext.loadApplicationContext(TestContext.java:280)
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:304)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:48)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:292)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: java.sql.SQLTransientConnectionException: java.net.ConnectException: Połączenie odrzucone (Connection refused)
+	at org.hsqldb.jdbc.Util.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.Util.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.JDBCConnection.<init>(Unknown Source)
+	at org.hsqldb.jdbc.JDBCDriver.getConnection(Unknown Source)
+	at org.hsqldb.jdbc.JDBCDriver.connect(Unknown Source)
+	at org.apache.commons.dbcp.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:38)
+	at org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:582)
+	at org.apache.commons.dbcp.BasicDataSource.validateConnectionFactory(BasicDataSource.java:1556)
+	at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1545)
+	... 62 more
+Caused by: org.hsqldb.HsqlException: java.net.ConnectException: Połączenie odrzucone (Connection refused)
+	at org.hsqldb.ClientConnection.openConnection(Unknown Source)
+	at org.hsqldb.ClientConnection.initConnection(Unknown Source)
+	at org.hsqldb.ClientConnection.<init>(Unknown Source)
+	... 69 more
+Caused by: java.net.ConnectException: Połączenie odrzucone (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:211)
+	at org.hsqldb.server.HsqlSocketFactory.createSocket(Unknown Source)
+	... 72 more
+2017-12-11 10:44:30,738 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2017-12-11 10:44:30,748 INFO  [JdbcSupportLoader]  - Disabling contextual LOB creation as connection was null
+2017-12-11 10:44:30,748 INFO  [TransactionFactoryFactory]  - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2017-12-11 10:44:30,749 INFO  [TransactionManagerLookupFactory]  - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2017-12-11 10:44:30,749 INFO  [SettingsFactory]  - Automatic flush during beforeCompletion(): disabled
+2017-12-11 10:44:30,749 INFO  [SettingsFactory]  - Automatic session close at end of transaction: disabled
+2017-12-11 10:44:30,750 INFO  [SettingsFactory]  - Scrollable result sets: disabled
+2017-12-11 10:44:30,750 INFO  [SettingsFactory]  - JDBC3 getGeneratedKeys(): disabled
+2017-12-11 10:44:30,750 INFO  [SettingsFactory]  - Connection release mode: auto
+2017-12-11 10:44:30,750 INFO  [SettingsFactory]  - Default batch fetch size: 1
+2017-12-11 10:44:30,750 INFO  [SettingsFactory]  - Generate SQL with comments: disabled
+2017-12-11 10:44:30,750 INFO  [SettingsFactory]  - Order SQL updates by primary key: disabled
+2017-12-11 10:44:30,750 INFO  [SettingsFactory]  - Order SQL inserts for batching: disabled
+2017-12-11 10:44:30,750 INFO  [SettingsFactory]  - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2017-12-11 10:44:30,754 INFO  [ASTQueryTranslatorFactory]  - Using ASTQueryTranslatorFactory
+2017-12-11 10:44:30,755 INFO  [SettingsFactory]  - Query language substitutions: {}
+2017-12-11 10:44:30,755 INFO  [SettingsFactory]  - JPA-QL strict compliance: disabled
+2017-12-11 10:44:30,755 INFO  [SettingsFactory]  - Second-level cache: enabled
+2017-12-11 10:44:30,755 INFO  [SettingsFactory]  - Query cache: disabled
+2017-12-11 10:44:30,755 INFO  [SettingsFactory]  - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2017-12-11 10:44:30,755 INFO  [SettingsFactory]  - Optimize cache for minimal puts: disabled
+2017-12-11 10:44:30,756 INFO  [SettingsFactory]  - Structured second-level cache entries: disabled
+2017-12-11 10:44:30,758 INFO  [SettingsFactory]  - Echoing all SQL to stdout
+2017-12-11 10:44:30,758 INFO  [SettingsFactory]  - Statistics: disabled
+2017-12-11 10:44:30,758 INFO  [SettingsFactory]  - Deleted entity synthetic identifier rollback: disabled
+2017-12-11 10:44:30,758 INFO  [SettingsFactory]  - Default entity-mode: pojo
+2017-12-11 10:44:30,759 INFO  [SettingsFactory]  - Named query checking : enabled
+2017-12-11 10:44:30,759 INFO  [SettingsFactory]  - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2017-12-11 10:44:30,776 INFO  [SessionFactoryImpl]  - building session factory
+2017-12-11 10:44:30,780 INFO  [BasicTypeRegistry]  - Type registration [clob] overrides previous : org.hibernate.type.ClobType@456d6c1e
+2017-12-11 10:44:30,780 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@456d6c1e
+2017-12-11 10:44:30,780 INFO  [BasicTypeRegistry]  - Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@1e13529a
+2017-12-11 10:44:30,780 INFO  [BasicTypeRegistry]  - Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@1ec9bd38
+2017-12-11 10:44:30,780 INFO  [BasicTypeRegistry]  - Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@452e19ca
+2017-12-11 10:44:30,780 INFO  [BasicTypeRegistry]  - Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@6b0d80ed
+2017-12-11 10:44:30,780 INFO  [BasicTypeRegistry]  - Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@6f8e8894
+2017-12-11 10:44:30,780 INFO  [BasicTypeRegistry]  - Type registration [blob] overrides previous : org.hibernate.type.BlobType@3cfdd820
+2017-12-11 10:44:30,780 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@3cfdd820
+2017-12-11 10:44:30,932 INFO  [SessionFactoryObjectFactory]  - Not binding factory to JNDI, no JNDI name configured
+2017-12-11 10:44:31,117 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2017-12-11 10:44:31,119 WARN  [JDBCExceptionReporter]  - SQL Error: 0, SQLState: null
+2017-12-11 10:44:31,119 ERROR [JDBCExceptionReporter]  - Cannot create PoolableConnectionFactory (java.net.ConnectException: Połączenie odrzucone (Connection refused))
+2017-12-11 10:44:31,120 WARN  [JDBCExceptionReporter]  - SQL Error: 0, SQLState: null
+2017-12-11 10:44:31,120 ERROR [JDBCExceptionReporter]  - Cannot create PoolableConnectionFactory (java.net.ConnectException: Połączenie odrzucone (Connection refused))
+2017-12-11 10:44:31,177 ERROR [TestContextManager]  - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@48d5f34e] to prepare test instance [com.example.shdemo.service.SellingManagerTest@fc258b1]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:308)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:48)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:292)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sellingMangerHibernateImpl': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.example.shdemo.service.SellingMangerHibernateImpl.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hibernateSessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.springframework.jdbc.UncategorizedSQLException: Hibernate operation: Cannot open connection; uncategorized SQLException for SQL [???]; SQL state [null]; error code [0]; Cannot create PoolableConnectionFactory (java.net.ConnectException: Połączenie odrzucone (Connection refused)); nested exception is org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (java.net.ConnectException: Połączenie odrzucone (Connection refused))
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:288)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1074)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:585)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:84)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:1)
+	at org.springframework.test.context.TestContext.loadApplicationContext(TestContext.java:280)
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:304)
+	... 24 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.example.shdemo.service.SellingMangerHibernateImpl.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hibernateSessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.springframework.jdbc.UncategorizedSQLException: Hibernate operation: Cannot open connection; uncategorized SQLException for SQL [???]; SQL state [null]; error code [0]; Cannot create PoolableConnectionFactory (java.net.ConnectException: Połączenie odrzucone (Connection refused)); nested exception is org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (java.net.ConnectException: Połączenie odrzucone (Connection refused))
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:84)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:285)
+	... 38 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hibernateSessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.springframework.jdbc.UncategorizedSQLException: Hibernate operation: Cannot open connection; uncategorized SQLException for SQL [???]; SQL state [null]; error code [0]; Cannot create PoolableConnectionFactory (java.net.ConnectException: Połączenie odrzucone (Connection refused)); nested exception is org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (java.net.ConnectException: Połączenie odrzucone (Connection refused))
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:848)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:790)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:707)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+	... 40 more
+Caused by: org.springframework.jdbc.UncategorizedSQLException: Hibernate operation: Cannot open connection; uncategorized SQLException for SQL [???]; SQL state [null]; error code [0]; Cannot create PoolableConnectionFactory (java.net.ConnectException: Połączenie odrzucone (Connection refused)); nested exception is org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (java.net.ConnectException: Połączenie odrzucone (Connection refused))
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:83)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:80)
+	at org.springframework.orm.hibernate3.HibernateAccessor.convertJdbcAccessException(HibernateAccessor.java:424)
+	at org.springframework.orm.hibernate3.HibernateAccessor.convertHibernateAccessException(HibernateAccessor.java:410)
+	at org.springframework.orm.hibernate3.HibernateTemplate.doExecute(HibernateTemplate.java:411)
+	at org.springframework.orm.hibernate3.HibernateTemplate.execute(HibernateTemplate.java:339)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.updateDatabaseSchema(LocalSessionFactoryBean.java:935)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.afterSessionFactoryCreation(LocalSessionFactoryBean.java:883)
+	at org.springframework.orm.hibernate3.AbstractSessionFactoryBean.afterPropertiesSet(AbstractSessionFactoryBean.java:213)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1477)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1417)
+	... 50 more
+Caused by: org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (java.net.ConnectException: Połączenie odrzucone (Connection refused))
+	at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1549)
+	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1388)
+	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:1044)
+	at org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider.getConnection(LocalDataSourceConnectionProvider.java:81)
+	at org.hibernate.jdbc.ConnectionManager.openConnection(ConnectionManager.java:446)
+	at org.hibernate.jdbc.ConnectionManager.getConnection(ConnectionManager.java:167)
+	at org.hibernate.jdbc.BorrowedConnectionProxy.invoke(BorrowedConnectionProxy.java:74)
+	at com.sun.proxy.$Proxy20.getMetaData(Unknown Source)
+	at org.hibernate.tool.hbm2ddl.DatabaseMetadata.<init>(DatabaseMetadata.java:67)
+	at org.hibernate.tool.hbm2ddl.DatabaseMetadata.<init>(DatabaseMetadata.java:62)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean$1.doInHibernate(LocalSessionFactoryBean.java:940)
+	at org.springframework.orm.hibernate3.HibernateTemplate.doExecute(HibernateTemplate.java:406)
+	... 56 more
+Caused by: java.sql.SQLTransientConnectionException: java.net.ConnectException: Połączenie odrzucone (Connection refused)
+	at org.hsqldb.jdbc.Util.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.Util.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.JDBCConnection.<init>(Unknown Source)
+	at org.hsqldb.jdbc.JDBCDriver.getConnection(Unknown Source)
+	at org.hsqldb.jdbc.JDBCDriver.connect(Unknown Source)
+	at org.apache.commons.dbcp.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:38)
+	at org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:582)
+	at org.apache.commons.dbcp.BasicDataSource.validateConnectionFactory(BasicDataSource.java:1556)
+	at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1545)
+	... 67 more
+Caused by: org.hsqldb.HsqlException: java.net.ConnectException: Połączenie odrzucone (Connection refused)
+	at org.hsqldb.ClientConnection.openConnection(Unknown Source)
+	at org.hsqldb.ClientConnection.initConnection(Unknown Source)
+	at org.hsqldb.ClientConnection.<init>(Unknown Source)
+	... 74 more
+Caused by: java.net.ConnectException: Połączenie odrzucone (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:211)
+	at org.hsqldb.server.HsqlSocketFactory.createSocket(Unknown Source)
+	... 77 more
+2017-12-11 10:44:31,322 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.shdemo.domain.Car
+2017-12-11 10:44:31,323 INFO  [QueryBinder]  - Binding Named query: car.unsold => Select c from Car c where c.sold = false
+2017-12-11 10:44:31,323 INFO  [EntityBinder]  - Bind entity com.example.shdemo.domain.Car on table Car
+2017-12-11 10:44:31,324 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.shdemo.domain.Person
+2017-12-11 10:44:31,324 INFO  [QueryBinder]  - Binding Named query: person.all => Select p from Person p
+2017-12-11 10:44:31,324 INFO  [QueryBinder]  - Binding Named query: person.byPin => Select p from Person p where p.pin = :pin
+2017-12-11 10:44:31,324 INFO  [EntityBinder]  - Bind entity com.example.shdemo.domain.Person on table Person
+2017-12-11 10:44:31,326 INFO  [Configuration]  - Hibernate Validator not found: ignoring
+2017-12-11 10:44:31,327 INFO  [HibernateSearchEventListenerRegister]  - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2017-12-11 10:44:31,328 INFO  [ConnectionProviderFactory]  - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2017-12-11 10:44:31,328 WARN  [JDBCExceptionReporter]  - SQL Error: 0, SQLState: null
+2017-12-11 10:44:31,328 ERROR [JDBCExceptionReporter]  - Cannot create PoolableConnectionFactory (java.net.ConnectException: Połączenie odrzucone (Connection refused))
+2017-12-11 10:44:31,330 WARN  [SettingsFactory]  - Could not obtain connection to query metadata
+org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (java.net.ConnectException: Połączenie odrzucone (Connection refused))
+	at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1549)
+	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1388)
+	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:1044)
+	at org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider.getConnection(LocalDataSourceConnectionProvider.java:81)
+	at org.hibernate.cfg.SettingsFactory.buildSettings(SettingsFactory.java:113)
+	at org.hibernate.cfg.Configuration.buildSettingsInternal(Configuration.java:2863)
+	at org.hibernate.cfg.Configuration.buildSettings(Configuration.java:2859)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1870)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.newSessionFactory(LocalSessionFactoryBean.java:860)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:779)
+	at org.springframework.orm.hibernate3.AbstractSessionFactoryBean.afterPropertiesSet(AbstractSessionFactoryBean.java:211)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1477)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:848)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:790)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:707)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:84)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:285)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1074)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:585)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:84)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:1)
+	at org.springframework.test.context.TestContext.loadApplicationContext(TestContext.java:280)
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:304)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:48)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:292)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: java.sql.SQLTransientConnectionException: java.net.ConnectException: Połączenie odrzucone (Connection refused)
+	at org.hsqldb.jdbc.Util.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.Util.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.JDBCConnection.<init>(Unknown Source)
+	at org.hsqldb.jdbc.JDBCDriver.getConnection(Unknown Source)
+	at org.hsqldb.jdbc.JDBCDriver.connect(Unknown Source)
+	at org.apache.commons.dbcp.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:38)
+	at org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:582)
+	at org.apache.commons.dbcp.BasicDataSource.validateConnectionFactory(BasicDataSource.java:1556)
+	at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1545)
+	... 62 more
+Caused by: org.hsqldb.HsqlException: java.net.ConnectException: Połączenie odrzucone (Connection refused)
+	at org.hsqldb.ClientConnection.openConnection(Unknown Source)
+	at org.hsqldb.ClientConnection.initConnection(Unknown Source)
+	at org.hsqldb.ClientConnection.<init>(Unknown Source)
+	... 69 more
+Caused by: java.net.ConnectException: Połączenie odrzucone (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:211)
+	at org.hsqldb.server.HsqlSocketFactory.createSocket(Unknown Source)
+	... 72 more
+2017-12-11 10:44:31,332 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2017-12-11 10:44:31,332 INFO  [JdbcSupportLoader]  - Disabling contextual LOB creation as connection was null
+2017-12-11 10:44:31,333 INFO  [TransactionFactoryFactory]  - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2017-12-11 10:44:31,333 INFO  [TransactionManagerLookupFactory]  - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2017-12-11 10:44:31,333 INFO  [SettingsFactory]  - Automatic flush during beforeCompletion(): disabled
+2017-12-11 10:44:31,333 INFO  [SettingsFactory]  - Automatic session close at end of transaction: disabled
+2017-12-11 10:44:31,333 INFO  [SettingsFactory]  - Scrollable result sets: disabled
+2017-12-11 10:44:31,333 INFO  [SettingsFactory]  - JDBC3 getGeneratedKeys(): disabled
+2017-12-11 10:44:31,333 INFO  [SettingsFactory]  - Connection release mode: auto
+2017-12-11 10:44:31,333 INFO  [SettingsFactory]  - Default batch fetch size: 1
+2017-12-11 10:44:31,333 INFO  [SettingsFactory]  - Generate SQL with comments: disabled
+2017-12-11 10:44:31,333 INFO  [SettingsFactory]  - Order SQL updates by primary key: disabled
+2017-12-11 10:44:31,334 INFO  [SettingsFactory]  - Order SQL inserts for batching: disabled
+2017-12-11 10:44:31,334 INFO  [SettingsFactory]  - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2017-12-11 10:44:31,334 INFO  [ASTQueryTranslatorFactory]  - Using ASTQueryTranslatorFactory
+2017-12-11 10:44:31,334 INFO  [SettingsFactory]  - Query language substitutions: {}
+2017-12-11 10:44:31,334 INFO  [SettingsFactory]  - JPA-QL strict compliance: disabled
+2017-12-11 10:44:31,334 INFO  [SettingsFactory]  - Second-level cache: enabled
+2017-12-11 10:44:31,334 INFO  [SettingsFactory]  - Query cache: disabled
+2017-12-11 10:44:31,334 INFO  [SettingsFactory]  - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2017-12-11 10:44:31,334 INFO  [SettingsFactory]  - Optimize cache for minimal puts: disabled
+2017-12-11 10:44:31,334 INFO  [SettingsFactory]  - Structured second-level cache entries: disabled
+2017-12-11 10:44:31,334 INFO  [SettingsFactory]  - Echoing all SQL to stdout
+2017-12-11 10:44:31,334 INFO  [SettingsFactory]  - Statistics: disabled
+2017-12-11 10:44:31,334 INFO  [SettingsFactory]  - Deleted entity synthetic identifier rollback: disabled
+2017-12-11 10:44:31,334 INFO  [SettingsFactory]  - Default entity-mode: pojo
+2017-12-11 10:44:31,334 INFO  [SettingsFactory]  - Named query checking : enabled
+2017-12-11 10:44:31,335 INFO  [SettingsFactory]  - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2017-12-11 10:44:31,338 INFO  [SessionFactoryImpl]  - building session factory
+2017-12-11 10:44:31,342 INFO  [BasicTypeRegistry]  - Type registration [clob] overrides previous : org.hibernate.type.ClobType@456d6c1e
+2017-12-11 10:44:31,343 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@456d6c1e
+2017-12-11 10:44:31,343 INFO  [BasicTypeRegistry]  - Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@1e13529a
+2017-12-11 10:44:31,343 INFO  [BasicTypeRegistry]  - Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@1ec9bd38
+2017-12-11 10:44:31,343 INFO  [BasicTypeRegistry]  - Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@452e19ca
+2017-12-11 10:44:31,344 INFO  [BasicTypeRegistry]  - Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@6b0d80ed
+2017-12-11 10:44:31,344 INFO  [BasicTypeRegistry]  - Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@6f8e8894
+2017-12-11 10:44:31,344 INFO  [BasicTypeRegistry]  - Type registration [blob] overrides previous : org.hibernate.type.BlobType@3cfdd820
+2017-12-11 10:44:31,344 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@3cfdd820
+2017-12-11 10:44:31,352 INFO  [SessionFactoryObjectFactory]  - Not binding factory to JNDI, no JNDI name configured
+2017-12-11 10:44:31,364 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2017-12-11 10:44:31,365 WARN  [JDBCExceptionReporter]  - SQL Error: 0, SQLState: null
+2017-12-11 10:44:31,366 ERROR [JDBCExceptionReporter]  - Cannot create PoolableConnectionFactory (java.net.ConnectException: Połączenie odrzucone (Connection refused))
+2017-12-11 10:44:31,366 WARN  [JDBCExceptionReporter]  - SQL Error: 0, SQLState: null
+2017-12-11 10:44:31,366 ERROR [JDBCExceptionReporter]  - Cannot create PoolableConnectionFactory (java.net.ConnectException: Połączenie odrzucone (Connection refused))
+2017-12-11 10:44:31,367 ERROR [TestContextManager]  - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@48d5f34e] to prepare test instance [com.example.shdemo.service.SellingManagerTest@3668d4]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:308)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:48)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:292)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sellingMangerHibernateImpl': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.example.shdemo.service.SellingMangerHibernateImpl.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hibernateSessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.springframework.jdbc.UncategorizedSQLException: Hibernate operation: Cannot open connection; uncategorized SQLException for SQL [???]; SQL state [null]; error code [0]; Cannot create PoolableConnectionFactory (java.net.ConnectException: Połączenie odrzucone (Connection refused)); nested exception is org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (java.net.ConnectException: Połączenie odrzucone (Connection refused))
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:288)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1074)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:585)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:84)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:1)
+	at org.springframework.test.context.TestContext.loadApplicationContext(TestContext.java:280)
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:304)
+	... 24 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.example.shdemo.service.SellingMangerHibernateImpl.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hibernateSessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.springframework.jdbc.UncategorizedSQLException: Hibernate operation: Cannot open connection; uncategorized SQLException for SQL [???]; SQL state [null]; error code [0]; Cannot create PoolableConnectionFactory (java.net.ConnectException: Połączenie odrzucone (Connection refused)); nested exception is org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (java.net.ConnectException: Połączenie odrzucone (Connection refused))
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:84)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:285)
+	... 38 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hibernateSessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.springframework.jdbc.UncategorizedSQLException: Hibernate operation: Cannot open connection; uncategorized SQLException for SQL [???]; SQL state [null]; error code [0]; Cannot create PoolableConnectionFactory (java.net.ConnectException: Połączenie odrzucone (Connection refused)); nested exception is org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (java.net.ConnectException: Połączenie odrzucone (Connection refused))
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:848)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:790)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:707)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+	... 40 more
+Caused by: org.springframework.jdbc.UncategorizedSQLException: Hibernate operation: Cannot open connection; uncategorized SQLException for SQL [???]; SQL state [null]; error code [0]; Cannot create PoolableConnectionFactory (java.net.ConnectException: Połączenie odrzucone (Connection refused)); nested exception is org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (java.net.ConnectException: Połączenie odrzucone (Connection refused))
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:83)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:80)
+	at org.springframework.orm.hibernate3.HibernateAccessor.convertJdbcAccessException(HibernateAccessor.java:424)
+	at org.springframework.orm.hibernate3.HibernateAccessor.convertHibernateAccessException(HibernateAccessor.java:410)
+	at org.springframework.orm.hibernate3.HibernateTemplate.doExecute(HibernateTemplate.java:411)
+	at org.springframework.orm.hibernate3.HibernateTemplate.execute(HibernateTemplate.java:339)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.updateDatabaseSchema(LocalSessionFactoryBean.java:935)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.afterSessionFactoryCreation(LocalSessionFactoryBean.java:883)
+	at org.springframework.orm.hibernate3.AbstractSessionFactoryBean.afterPropertiesSet(AbstractSessionFactoryBean.java:213)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1477)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1417)
+	... 50 more
+Caused by: org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (java.net.ConnectException: Połączenie odrzucone (Connection refused))
+	at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1549)
+	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1388)
+	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:1044)
+	at org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider.getConnection(LocalDataSourceConnectionProvider.java:81)
+	at org.hibernate.jdbc.ConnectionManager.openConnection(ConnectionManager.java:446)
+	at org.hibernate.jdbc.ConnectionManager.getConnection(ConnectionManager.java:167)
+	at org.hibernate.jdbc.BorrowedConnectionProxy.invoke(BorrowedConnectionProxy.java:74)
+	at com.sun.proxy.$Proxy20.getMetaData(Unknown Source)
+	at org.hibernate.tool.hbm2ddl.DatabaseMetadata.<init>(DatabaseMetadata.java:67)
+	at org.hibernate.tool.hbm2ddl.DatabaseMetadata.<init>(DatabaseMetadata.java:62)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean$1.doInHibernate(LocalSessionFactoryBean.java:940)
+	at org.springframework.orm.hibernate3.HibernateTemplate.doExecute(HibernateTemplate.java:406)
+	... 56 more
+Caused by: java.sql.SQLTransientConnectionException: java.net.ConnectException: Połączenie odrzucone (Connection refused)
+	at org.hsqldb.jdbc.Util.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.Util.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.JDBCConnection.<init>(Unknown Source)
+	at org.hsqldb.jdbc.JDBCDriver.getConnection(Unknown Source)
+	at org.hsqldb.jdbc.JDBCDriver.connect(Unknown Source)
+	at org.apache.commons.dbcp.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:38)
+	at org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:582)
+	at org.apache.commons.dbcp.BasicDataSource.validateConnectionFactory(BasicDataSource.java:1556)
+	at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1545)
+	... 67 more
+Caused by: org.hsqldb.HsqlException: java.net.ConnectException: Połączenie odrzucone (Connection refused)
+	at org.hsqldb.ClientConnection.openConnection(Unknown Source)
+	at org.hsqldb.ClientConnection.initConnection(Unknown Source)
+	at org.hsqldb.ClientConnection.<init>(Unknown Source)
+	... 74 more
+Caused by: java.net.ConnectException: Połączenie odrzucone (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:211)
+	at org.hsqldb.server.HsqlSocketFactory.createSocket(Unknown Source)
+	... 77 more
+2017-12-11 10:44:31,455 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.shdemo.domain.Car
+2017-12-11 10:44:31,455 INFO  [QueryBinder]  - Binding Named query: car.unsold => Select c from Car c where c.sold = false
+2017-12-11 10:44:31,456 INFO  [EntityBinder]  - Bind entity com.example.shdemo.domain.Car on table Car
+2017-12-11 10:44:31,457 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.shdemo.domain.Person
+2017-12-11 10:44:31,457 INFO  [QueryBinder]  - Binding Named query: person.all => Select p from Person p
+2017-12-11 10:44:31,457 INFO  [QueryBinder]  - Binding Named query: person.byPin => Select p from Person p where p.pin = :pin
+2017-12-11 10:44:31,458 INFO  [EntityBinder]  - Bind entity com.example.shdemo.domain.Person on table Person
+2017-12-11 10:44:31,460 INFO  [Configuration]  - Hibernate Validator not found: ignoring
+2017-12-11 10:44:31,462 INFO  [HibernateSearchEventListenerRegister]  - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2017-12-11 10:44:31,462 INFO  [ConnectionProviderFactory]  - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2017-12-11 10:44:31,463 WARN  [JDBCExceptionReporter]  - SQL Error: 0, SQLState: null
+2017-12-11 10:44:31,463 ERROR [JDBCExceptionReporter]  - Cannot create PoolableConnectionFactory (java.net.ConnectException: Połączenie odrzucone (Connection refused))
+2017-12-11 10:44:31,463 WARN  [SettingsFactory]  - Could not obtain connection to query metadata
+org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (java.net.ConnectException: Połączenie odrzucone (Connection refused))
+	at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1549)
+	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1388)
+	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:1044)
+	at org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider.getConnection(LocalDataSourceConnectionProvider.java:81)
+	at org.hibernate.cfg.SettingsFactory.buildSettings(SettingsFactory.java:113)
+	at org.hibernate.cfg.Configuration.buildSettingsInternal(Configuration.java:2863)
+	at org.hibernate.cfg.Configuration.buildSettings(Configuration.java:2859)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1870)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.newSessionFactory(LocalSessionFactoryBean.java:860)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:779)
+	at org.springframework.orm.hibernate3.AbstractSessionFactoryBean.afterPropertiesSet(AbstractSessionFactoryBean.java:211)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1477)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:848)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:790)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:707)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:84)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:285)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1074)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:585)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:84)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:1)
+	at org.springframework.test.context.TestContext.loadApplicationContext(TestContext.java:280)
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:304)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:48)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:292)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: java.sql.SQLTransientConnectionException: java.net.ConnectException: Połączenie odrzucone (Connection refused)
+	at org.hsqldb.jdbc.Util.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.Util.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.JDBCConnection.<init>(Unknown Source)
+	at org.hsqldb.jdbc.JDBCDriver.getConnection(Unknown Source)
+	at org.hsqldb.jdbc.JDBCDriver.connect(Unknown Source)
+	at org.apache.commons.dbcp.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:38)
+	at org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:582)
+	at org.apache.commons.dbcp.BasicDataSource.validateConnectionFactory(BasicDataSource.java:1556)
+	at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1545)
+	... 62 more
+Caused by: org.hsqldb.HsqlException: java.net.ConnectException: Połączenie odrzucone (Connection refused)
+	at org.hsqldb.ClientConnection.openConnection(Unknown Source)
+	at org.hsqldb.ClientConnection.initConnection(Unknown Source)
+	at org.hsqldb.ClientConnection.<init>(Unknown Source)
+	... 69 more
+Caused by: java.net.ConnectException: Połączenie odrzucone (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:211)
+	at org.hsqldb.server.HsqlSocketFactory.createSocket(Unknown Source)
+	... 72 more
+2017-12-11 10:44:31,464 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2017-12-11 10:44:31,464 INFO  [JdbcSupportLoader]  - Disabling contextual LOB creation as connection was null
+2017-12-11 10:44:31,464 INFO  [TransactionFactoryFactory]  - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2017-12-11 10:44:31,464 INFO  [TransactionManagerLookupFactory]  - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2017-12-11 10:44:31,464 INFO  [SettingsFactory]  - Automatic flush during beforeCompletion(): disabled
+2017-12-11 10:44:31,464 INFO  [SettingsFactory]  - Automatic session close at end of transaction: disabled
+2017-12-11 10:44:31,464 INFO  [SettingsFactory]  - Scrollable result sets: disabled
+2017-12-11 10:44:31,464 INFO  [SettingsFactory]  - JDBC3 getGeneratedKeys(): disabled
+2017-12-11 10:44:31,464 INFO  [SettingsFactory]  - Connection release mode: auto
+2017-12-11 10:44:31,464 INFO  [SettingsFactory]  - Default batch fetch size: 1
+2017-12-11 10:44:31,464 INFO  [SettingsFactory]  - Generate SQL with comments: disabled
+2017-12-11 10:44:31,464 INFO  [SettingsFactory]  - Order SQL updates by primary key: disabled
+2017-12-11 10:44:31,464 INFO  [SettingsFactory]  - Order SQL inserts for batching: disabled
+2017-12-11 10:44:31,464 INFO  [SettingsFactory]  - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2017-12-11 10:44:31,464 INFO  [ASTQueryTranslatorFactory]  - Using ASTQueryTranslatorFactory
+2017-12-11 10:44:31,464 INFO  [SettingsFactory]  - Query language substitutions: {}
+2017-12-11 10:44:31,464 INFO  [SettingsFactory]  - JPA-QL strict compliance: disabled
+2017-12-11 10:44:31,464 INFO  [SettingsFactory]  - Second-level cache: enabled
+2017-12-11 10:44:31,464 INFO  [SettingsFactory]  - Query cache: disabled
+2017-12-11 10:44:31,464 INFO  [SettingsFactory]  - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2017-12-11 10:44:31,464 INFO  [SettingsFactory]  - Optimize cache for minimal puts: disabled
+2017-12-11 10:44:31,464 INFO  [SettingsFactory]  - Structured second-level cache entries: disabled
+2017-12-11 10:44:31,464 INFO  [SettingsFactory]  - Echoing all SQL to stdout
+2017-12-11 10:44:31,464 INFO  [SettingsFactory]  - Statistics: disabled
+2017-12-11 10:44:31,464 INFO  [SettingsFactory]  - Deleted entity synthetic identifier rollback: disabled
+2017-12-11 10:44:31,464 INFO  [SettingsFactory]  - Default entity-mode: pojo
+2017-12-11 10:44:31,464 INFO  [SettingsFactory]  - Named query checking : enabled
+2017-12-11 10:44:31,465 INFO  [SettingsFactory]  - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2017-12-11 10:44:31,468 INFO  [SessionFactoryImpl]  - building session factory
+2017-12-11 10:44:31,469 INFO  [BasicTypeRegistry]  - Type registration [clob] overrides previous : org.hibernate.type.ClobType@456d6c1e
+2017-12-11 10:44:31,469 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@456d6c1e
+2017-12-11 10:44:31,469 INFO  [BasicTypeRegistry]  - Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@1e13529a
+2017-12-11 10:44:31,469 INFO  [BasicTypeRegistry]  - Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@1ec9bd38
+2017-12-11 10:44:31,469 INFO  [BasicTypeRegistry]  - Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@452e19ca
+2017-12-11 10:44:31,469 INFO  [BasicTypeRegistry]  - Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@6b0d80ed
+2017-12-11 10:44:31,469 INFO  [BasicTypeRegistry]  - Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@6f8e8894
+2017-12-11 10:44:31,469 INFO  [BasicTypeRegistry]  - Type registration [blob] overrides previous : org.hibernate.type.BlobType@3cfdd820
+2017-12-11 10:44:31,469 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@3cfdd820
+2017-12-11 10:44:31,474 INFO  [SessionFactoryObjectFactory]  - Not binding factory to JNDI, no JNDI name configured
+2017-12-11 10:44:31,479 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2017-12-11 10:44:31,480 WARN  [JDBCExceptionReporter]  - SQL Error: 0, SQLState: null
+2017-12-11 10:44:31,480 ERROR [JDBCExceptionReporter]  - Cannot create PoolableConnectionFactory (java.net.ConnectException: Połączenie odrzucone (Connection refused))
+2017-12-11 10:44:31,480 WARN  [JDBCExceptionReporter]  - SQL Error: 0, SQLState: null
+2017-12-11 10:44:31,480 ERROR [JDBCExceptionReporter]  - Cannot create PoolableConnectionFactory (java.net.ConnectException: Połączenie odrzucone (Connection refused))
+2017-12-11 10:44:31,481 ERROR [TestContextManager]  - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@48d5f34e] to prepare test instance [com.example.shdemo.service.SellingManagerTest@3f390d63]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:308)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:48)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:292)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sellingMangerHibernateImpl': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.example.shdemo.service.SellingMangerHibernateImpl.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hibernateSessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.springframework.jdbc.UncategorizedSQLException: Hibernate operation: Cannot open connection; uncategorized SQLException for SQL [???]; SQL state [null]; error code [0]; Cannot create PoolableConnectionFactory (java.net.ConnectException: Połączenie odrzucone (Connection refused)); nested exception is org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (java.net.ConnectException: Połączenie odrzucone (Connection refused))
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:288)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1074)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:585)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:84)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:1)
+	at org.springframework.test.context.TestContext.loadApplicationContext(TestContext.java:280)
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:304)
+	... 24 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.example.shdemo.service.SellingMangerHibernateImpl.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hibernateSessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.springframework.jdbc.UncategorizedSQLException: Hibernate operation: Cannot open connection; uncategorized SQLException for SQL [???]; SQL state [null]; error code [0]; Cannot create PoolableConnectionFactory (java.net.ConnectException: Połączenie odrzucone (Connection refused)); nested exception is org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (java.net.ConnectException: Połączenie odrzucone (Connection refused))
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:84)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:285)
+	... 38 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hibernateSessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.springframework.jdbc.UncategorizedSQLException: Hibernate operation: Cannot open connection; uncategorized SQLException for SQL [???]; SQL state [null]; error code [0]; Cannot create PoolableConnectionFactory (java.net.ConnectException: Połączenie odrzucone (Connection refused)); nested exception is org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (java.net.ConnectException: Połączenie odrzucone (Connection refused))
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:848)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:790)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:707)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+	... 40 more
+Caused by: org.springframework.jdbc.UncategorizedSQLException: Hibernate operation: Cannot open connection; uncategorized SQLException for SQL [???]; SQL state [null]; error code [0]; Cannot create PoolableConnectionFactory (java.net.ConnectException: Połączenie odrzucone (Connection refused)); nested exception is org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (java.net.ConnectException: Połączenie odrzucone (Connection refused))
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:83)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:80)
+	at org.springframework.orm.hibernate3.HibernateAccessor.convertJdbcAccessException(HibernateAccessor.java:424)
+	at org.springframework.orm.hibernate3.HibernateAccessor.convertHibernateAccessException(HibernateAccessor.java:410)
+	at org.springframework.orm.hibernate3.HibernateTemplate.doExecute(HibernateTemplate.java:411)
+	at org.springframework.orm.hibernate3.HibernateTemplate.execute(HibernateTemplate.java:339)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.updateDatabaseSchema(LocalSessionFactoryBean.java:935)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.afterSessionFactoryCreation(LocalSessionFactoryBean.java:883)
+	at org.springframework.orm.hibernate3.AbstractSessionFactoryBean.afterPropertiesSet(AbstractSessionFactoryBean.java:213)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1477)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1417)
+	... 50 more
+Caused by: org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (java.net.ConnectException: Połączenie odrzucone (Connection refused))
+	at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1549)
+	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1388)
+	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:1044)
+	at org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider.getConnection(LocalDataSourceConnectionProvider.java:81)
+	at org.hibernate.jdbc.ConnectionManager.openConnection(ConnectionManager.java:446)
+	at org.hibernate.jdbc.ConnectionManager.getConnection(ConnectionManager.java:167)
+	at org.hibernate.jdbc.BorrowedConnectionProxy.invoke(BorrowedConnectionProxy.java:74)
+	at com.sun.proxy.$Proxy20.getMetaData(Unknown Source)
+	at org.hibernate.tool.hbm2ddl.DatabaseMetadata.<init>(DatabaseMetadata.java:67)
+	at org.hibernate.tool.hbm2ddl.DatabaseMetadata.<init>(DatabaseMetadata.java:62)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean$1.doInHibernate(LocalSessionFactoryBean.java:940)
+	at org.springframework.orm.hibernate3.HibernateTemplate.doExecute(HibernateTemplate.java:406)
+	... 56 more
+Caused by: java.sql.SQLTransientConnectionException: java.net.ConnectException: Połączenie odrzucone (Connection refused)
+	at org.hsqldb.jdbc.Util.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.Util.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.JDBCConnection.<init>(Unknown Source)
+	at org.hsqldb.jdbc.JDBCDriver.getConnection(Unknown Source)
+	at org.hsqldb.jdbc.JDBCDriver.connect(Unknown Source)
+	at org.apache.commons.dbcp.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:38)
+	at org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:582)
+	at org.apache.commons.dbcp.BasicDataSource.validateConnectionFactory(BasicDataSource.java:1556)
+	at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1545)
+	... 67 more
+Caused by: org.hsqldb.HsqlException: java.net.ConnectException: Połączenie odrzucone (Connection refused)
+	at org.hsqldb.ClientConnection.openConnection(Unknown Source)
+	at org.hsqldb.ClientConnection.initConnection(Unknown Source)
+	at org.hsqldb.ClientConnection.<init>(Unknown Source)
+	... 74 more
+Caused by: java.net.ConnectException: Połączenie odrzucone (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:211)
+	at org.hsqldb.server.HsqlSocketFactory.createSocket(Unknown Source)
+	... 77 more
+2017-12-11 10:48:08,107 INFO  [Version]  - Hibernate Commons Annotations 3.2.0.Final
+2017-12-11 10:48:08,143 INFO  [Environment]  - Hibernate 3.6.6.Final
+2017-12-11 10:48:08,149 INFO  [Environment]  - hibernate.properties not found
+2017-12-11 10:48:08,157 INFO  [Environment]  - Bytecode provider name : javassist
+2017-12-11 10:48:08,161 INFO  [Environment]  - using JDK 1.4 java.sql.Timestamp handling
+2017-12-11 10:48:08,280 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.shdemo.domain.Car
+2017-12-11 10:48:08,294 INFO  [QueryBinder]  - Binding Named query: car.unsold => Select c from Car c where c.sold = false
+2017-12-11 10:48:08,311 INFO  [EntityBinder]  - Bind entity com.example.shdemo.domain.Car on table Car
+2017-12-11 10:48:08,347 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.shdemo.domain.Person
+2017-12-11 10:48:08,348 INFO  [QueryBinder]  - Binding Named query: person.all => Select p from Person p
+2017-12-11 10:48:08,348 INFO  [QueryBinder]  - Binding Named query: person.byPin => Select p from Person p where p.pin = :pin
+2017-12-11 10:48:08,348 INFO  [EntityBinder]  - Bind entity com.example.shdemo.domain.Person on table Person
+2017-12-11 10:48:08,381 INFO  [Configuration]  - Hibernate Validator not found: ignoring
+2017-12-11 10:48:08,384 INFO  [HibernateSearchEventListenerRegister]  - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2017-12-11 10:48:08,388 INFO  [ConnectionProviderFactory]  - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2017-12-11 10:48:08,705 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2017-12-11 10:48:08,723 INFO  [SettingsFactory]  - Database ->
+       name : HSQL Database Engine
+    version : 2.2.4
+      major : 2
+      minor : 2
+2017-12-11 10:48:08,724 INFO  [SettingsFactory]  - Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.2.4
+      major : 2
+      minor : 2
+2017-12-11 10:48:08,725 INFO  [TransactionFactoryFactory]  - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2017-12-11 10:48:08,725 INFO  [TransactionManagerLookupFactory]  - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2017-12-11 10:48:08,725 INFO  [SettingsFactory]  - Automatic flush during beforeCompletion(): disabled
+2017-12-11 10:48:08,725 INFO  [SettingsFactory]  - Automatic session close at end of transaction: disabled
+2017-12-11 10:48:08,726 INFO  [SettingsFactory]  - JDBC batch size: 15
+2017-12-11 10:48:08,726 INFO  [SettingsFactory]  - JDBC batch updates for versioned data: disabled
+2017-12-11 10:48:08,726 INFO  [SettingsFactory]  - Scrollable result sets: enabled
+2017-12-11 10:48:08,726 INFO  [SettingsFactory]  - JDBC3 getGeneratedKeys(): enabled
+2017-12-11 10:48:08,726 INFO  [SettingsFactory]  - Connection release mode: auto
+2017-12-11 10:48:08,726 INFO  [SettingsFactory]  - Default batch fetch size: 1
+2017-12-11 10:48:08,727 INFO  [SettingsFactory]  - Generate SQL with comments: disabled
+2017-12-11 10:48:08,727 INFO  [SettingsFactory]  - Order SQL updates by primary key: disabled
+2017-12-11 10:48:08,727 INFO  [SettingsFactory]  - Order SQL inserts for batching: disabled
+2017-12-11 10:48:08,727 INFO  [SettingsFactory]  - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2017-12-11 10:48:08,731 INFO  [ASTQueryTranslatorFactory]  - Using ASTQueryTranslatorFactory
+2017-12-11 10:48:08,731 INFO  [SettingsFactory]  - Query language substitutions: {}
+2017-12-11 10:48:08,731 INFO  [SettingsFactory]  - JPA-QL strict compliance: disabled
+2017-12-11 10:48:08,731 INFO  [SettingsFactory]  - Second-level cache: enabled
+2017-12-11 10:48:08,731 INFO  [SettingsFactory]  - Query cache: disabled
+2017-12-11 10:48:08,731 INFO  [SettingsFactory]  - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2017-12-11 10:48:08,732 INFO  [SettingsFactory]  - Optimize cache for minimal puts: disabled
+2017-12-11 10:48:08,732 INFO  [SettingsFactory]  - Structured second-level cache entries: disabled
+2017-12-11 10:48:08,734 INFO  [SettingsFactory]  - Echoing all SQL to stdout
+2017-12-11 10:48:08,734 INFO  [SettingsFactory]  - Statistics: disabled
+2017-12-11 10:48:08,734 INFO  [SettingsFactory]  - Deleted entity synthetic identifier rollback: disabled
+2017-12-11 10:48:08,735 INFO  [SettingsFactory]  - Default entity-mode: pojo
+2017-12-11 10:48:08,735 INFO  [SettingsFactory]  - Named query checking : enabled
+2017-12-11 10:48:08,735 INFO  [SettingsFactory]  - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2017-12-11 10:48:08,759 INFO  [SessionFactoryImpl]  - building session factory
+2017-12-11 10:48:08,763 INFO  [BasicTypeRegistry]  - Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@928763c
+2017-12-11 10:48:08,763 INFO  [BasicTypeRegistry]  - Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@e25951c
+2017-12-11 10:48:08,763 INFO  [BasicTypeRegistry]  - Type registration [blob] overrides previous : org.hibernate.type.BlobType@15f47664
+2017-12-11 10:48:08,763 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@15f47664
+2017-12-11 10:48:08,763 INFO  [BasicTypeRegistry]  - Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@471a9022
+2017-12-11 10:48:08,763 INFO  [BasicTypeRegistry]  - Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@dc9876b
+2017-12-11 10:48:08,763 INFO  [BasicTypeRegistry]  - Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@2f666ebb
+2017-12-11 10:48:08,763 INFO  [BasicTypeRegistry]  - Type registration [clob] overrides previous : org.hibernate.type.ClobType@19976a65
+2017-12-11 10:48:08,764 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@19976a65
+2017-12-11 10:48:08,916 INFO  [SessionFactoryObjectFactory]  - Not binding factory to JNDI, no JNDI name configured
+2017-12-11 10:48:09,087 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2017-12-11 10:48:09,099 INFO  [DatabaseMetadata]  - table not found: Car
+2017-12-11 10:48:09,102 INFO  [DatabaseMetadata]  - table not found: Person
+2017-12-11 10:48:09,107 INFO  [DatabaseMetadata]  - table not found: Person_Car
+2017-12-11 10:48:09,113 INFO  [DatabaseMetadata]  - table not found: Car
+2017-12-11 10:48:09,115 INFO  [DatabaseMetadata]  - table not found: Person
+2017-12-11 10:48:09,117 INFO  [DatabaseMetadata]  - table not found: Person_Car
+2017-12-11 10:48:09,420 INFO  [SessionFactoryImpl]  - closing
+2017-12-11 11:19:34,073 INFO  [Version]  - Hibernate Commons Annotations 3.2.0.Final
+2017-12-11 11:19:34,083 INFO  [Environment]  - Hibernate 3.6.6.Final
+2017-12-11 11:19:34,091 INFO  [Environment]  - hibernate.properties not found
+2017-12-11 11:19:34,098 INFO  [Environment]  - Bytecode provider name : javassist
+2017-12-11 11:19:34,102 INFO  [Environment]  - using JDK 1.4 java.sql.Timestamp handling
+2017-12-11 11:19:34,223 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.shdemo.domain.Car
+2017-12-11 11:19:34,237 INFO  [QueryBinder]  - Binding Named query: car.unsold => Select c from Car c where c.sold = false
+2017-12-11 11:19:34,253 INFO  [EntityBinder]  - Bind entity com.example.shdemo.domain.Car on table Car
+2017-12-11 11:19:34,291 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.shdemo.domain.Person
+2017-12-11 11:19:34,292 INFO  [QueryBinder]  - Binding Named query: person.all => Select p from Person p
+2017-12-11 11:19:34,292 INFO  [QueryBinder]  - Binding Named query: person.byPin => Select p from Person p where p.pin = :pin
+2017-12-11 11:19:34,292 INFO  [EntityBinder]  - Bind entity com.example.shdemo.domain.Person on table Person
+2017-12-11 11:19:34,328 INFO  [Configuration]  - Hibernate Validator not found: ignoring
+2017-12-11 11:19:34,331 INFO  [HibernateSearchEventListenerRegister]  - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2017-12-11 11:19:34,334 INFO  [ConnectionProviderFactory]  - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2017-12-11 11:19:34,632 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2017-12-11 11:19:34,648 INFO  [SettingsFactory]  - Database ->
+       name : HSQL Database Engine
+    version : 2.2.4
+      major : 2
+      minor : 2
+2017-12-11 11:19:34,648 INFO  [SettingsFactory]  - Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.2.4
+      major : 2
+      minor : 2
+2017-12-11 11:19:34,649 INFO  [TransactionFactoryFactory]  - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2017-12-11 11:19:34,650 INFO  [TransactionManagerLookupFactory]  - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2017-12-11 11:19:34,650 INFO  [SettingsFactory]  - Automatic flush during beforeCompletion(): disabled
+2017-12-11 11:19:34,650 INFO  [SettingsFactory]  - Automatic session close at end of transaction: disabled
+2017-12-11 11:19:34,650 INFO  [SettingsFactory]  - JDBC batch size: 15
+2017-12-11 11:19:34,650 INFO  [SettingsFactory]  - JDBC batch updates for versioned data: disabled
+2017-12-11 11:19:34,651 INFO  [SettingsFactory]  - Scrollable result sets: enabled
+2017-12-11 11:19:34,651 INFO  [SettingsFactory]  - JDBC3 getGeneratedKeys(): enabled
+2017-12-11 11:19:34,651 INFO  [SettingsFactory]  - Connection release mode: auto
+2017-12-11 11:19:34,651 INFO  [SettingsFactory]  - Default batch fetch size: 1
+2017-12-11 11:19:34,651 INFO  [SettingsFactory]  - Generate SQL with comments: disabled
+2017-12-11 11:19:34,651 INFO  [SettingsFactory]  - Order SQL updates by primary key: disabled
+2017-12-11 11:19:34,651 INFO  [SettingsFactory]  - Order SQL inserts for batching: disabled
+2017-12-11 11:19:34,651 INFO  [SettingsFactory]  - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2017-12-11 11:19:34,655 INFO  [ASTQueryTranslatorFactory]  - Using ASTQueryTranslatorFactory
+2017-12-11 11:19:34,656 INFO  [SettingsFactory]  - Query language substitutions: {}
+2017-12-11 11:19:34,656 INFO  [SettingsFactory]  - JPA-QL strict compliance: disabled
+2017-12-11 11:19:34,656 INFO  [SettingsFactory]  - Second-level cache: enabled
+2017-12-11 11:19:34,656 INFO  [SettingsFactory]  - Query cache: disabled
+2017-12-11 11:19:34,656 INFO  [SettingsFactory]  - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2017-12-11 11:19:34,657 INFO  [SettingsFactory]  - Optimize cache for minimal puts: disabled
+2017-12-11 11:19:34,657 INFO  [SettingsFactory]  - Structured second-level cache entries: disabled
+2017-12-11 11:19:34,659 INFO  [SettingsFactory]  - Echoing all SQL to stdout
+2017-12-11 11:19:34,660 INFO  [SettingsFactory]  - Statistics: disabled
+2017-12-11 11:19:34,660 INFO  [SettingsFactory]  - Deleted entity synthetic identifier rollback: disabled
+2017-12-11 11:19:34,660 INFO  [SettingsFactory]  - Default entity-mode: pojo
+2017-12-11 11:19:34,660 INFO  [SettingsFactory]  - Named query checking : enabled
+2017-12-11 11:19:34,660 INFO  [SettingsFactory]  - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2017-12-11 11:19:34,685 INFO  [SessionFactoryImpl]  - building session factory
+2017-12-11 11:19:34,689 INFO  [BasicTypeRegistry]  - Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@928763c
+2017-12-11 11:19:34,689 INFO  [BasicTypeRegistry]  - Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@e25951c
+2017-12-11 11:19:34,689 INFO  [BasicTypeRegistry]  - Type registration [blob] overrides previous : org.hibernate.type.BlobType@15f47664
+2017-12-11 11:19:34,689 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@15f47664
+2017-12-11 11:19:34,689 INFO  [BasicTypeRegistry]  - Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@471a9022
+2017-12-11 11:19:34,689 INFO  [BasicTypeRegistry]  - Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@dc9876b
+2017-12-11 11:19:34,689 INFO  [BasicTypeRegistry]  - Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@2f666ebb
+2017-12-11 11:19:34,689 INFO  [BasicTypeRegistry]  - Type registration [clob] overrides previous : org.hibernate.type.ClobType@19976a65
+2017-12-11 11:19:34,689 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@19976a65
+2017-12-11 11:19:34,835 INFO  [SessionFactoryObjectFactory]  - Not binding factory to JNDI, no JNDI name configured
+2017-12-11 11:19:34,999 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2017-12-11 11:19:35,021 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.CAR
+2017-12-11 11:19:35,022 INFO  [TableMetadata]  - columns: [sold, model, id, make]
+2017-12-11 11:19:35,024 INFO  [TableMetadata]  - foreign keys: []
+2017-12-11 11:19:35,024 INFO  [TableMetadata]  - indexes: [sys_idx_sys_pk_10034_10035]
+2017-12-11 11:19:35,046 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.PERSON
+2017-12-11 11:19:35,046 INFO  [TableMetadata]  - columns: [firstname, pin, registrationdate, id]
+2017-12-11 11:19:35,048 INFO  [TableMetadata]  - foreign keys: []
+2017-12-11 11:19:35,048 INFO  [TableMetadata]  - indexes: [sys_idx_sys_ct_10038_10040, sys_idx_sys_pk_10037_10039]
+2017-12-11 11:19:35,061 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.PERSON_CAR
+2017-12-11 11:19:35,061 INFO  [TableMetadata]  - columns: [cars_id, person_id]
+2017-12-11 11:19:35,061 INFO  [TableMetadata]  - foreign keys: [fk9f49fbeafc3020a, fk9f49fbea2b751bbf]
+2017-12-11 11:19:35,062 INFO  [TableMetadata]  - indexes: [sys_idx_10046, sys_idx_10048, sys_idx_sys_ct_10043_10045]
+2017-12-11 11:19:35,402 INFO  [SessionFactoryImpl]  - closing
