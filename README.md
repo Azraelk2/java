@@ -1,1 +1,1 @@
-Projekt JDBC    -- Bron
+Projekt Spring    -- Bron
