@@ -1,1 +1,1 @@
-Projekty sa umieszczone na branchah
+Projekty JDBC i Spring sa umieszczone na odpowiadajacych im branchah
